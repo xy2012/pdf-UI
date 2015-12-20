@@ -1,0 +1,2 @@
+C:\Users\v-xiafe\Desktop\foxitSDK\foxitSDK\foxitSDK.vcxproj;x86
+C:\Users\v-xiafe\Desktop\foxitSDK\pdf\pdfReader.csproj;x86

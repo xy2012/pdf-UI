@@ -1,0 +1,68 @@
+﻿<Page
+    x:Class="pdf.renderPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:pdf"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+    
+    <Page.TopAppBar>
+        <AppBar Background="Transparent" >
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="30*"/>
+                    <ColumnDefinition Width="30*"/>
+                </Grid.ColumnDefinitions>
+                <StackPanel x:ConnectionId='1' x:Name="LeftPanel" Orientation="Horizontal" Grid.Column="0" HorizontalAlignment="Left">
+                    <AppBarButton x:Uid="Camera" Icon="Camera" Label="Camera" />
+                    <AppBarToggleButton x:Uid="Account" Icon="Account" Label="Account"/>
+                    <TextBox x:ConnectionId='5' x:Name="word" Width="100" Height="30"></TextBox>
+                    <AppBarButton x:ConnectionId='6' Icon="Find" x:Name="Searchword"                         ></AppBarButton>
+                    <AppBarButton x:ConnectionId='7' Label="findPrevious" Icon="Back"                       />
+                    <AppBarButton x:ConnectionId='8' Icon="Forward" Label="findNext"                     />
+                </StackPanel>
+                <StackPanel x:ConnectionId='2' x:Name="RightPanel" Orientation="Horizontal" Grid.Column="1" HorizontalAlignment="Right">
+                    <AppBarButton x:ConnectionId='3' x:Uid="Add" Icon="Add" Label="Add"                     />
+                    <AppBarToggleButton x:Uid="Remove" Icon="Remove" Label="Remove"/>
+                    <AppBarSeparator/>
+                    <AppBarButton x:ConnectionId='4' x:Uid="Delete" Icon="Delete" Label="Delete"                       />
+                   
+                </StackPanel>
+            </Grid>
+        </AppBar>
+
+    </Page.TopAppBar>
+   
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <ScrollViewer x:ConnectionId='9' x:Name="scroll_pdf" Background="Gray" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto">
+            <ScrollViewer.RenderTransform>
+                <CompositeTransform SkewY="0" TranslateY="0"/>
+            </ScrollViewer.RenderTransform>
+            <Image x:ConnectionId='10' x:Name="image" Stretch="Fill"                                                                                                  ></Image>
+        </ScrollViewer>
+    </Grid>
+    <Page.BottomAppBar>
+        
+        <CommandBar IsSticky="True">
+            <CommandBar.SecondaryCommands>
+                <AppBarButton x:ConnectionId='11' Label="Rotate Left"  Icon="Refresh"                              IsCompact="True"/>
+                <AppBarButton x:ConnectionId='12' Label="Rotate Right" Icon="Rotate"                               IsCompact="True" />
+                <AppBarButton x:ConnectionId='13' Label="Actual Size" Icon="Add"                              IsCompact="True"/>
+                <AppBarButton x:ConnectionId='14' Label="Fit Width" Icon="Add"                            IsCompact="True"/>
+                <AppBarButton x:ConnectionId='15' Label="Fit Height" Icon="Add"                             IsCompact="True"/>
+
+            </CommandBar.SecondaryCommands>
+
+            <AppBarButton x:ConnectionId='16' Label="Previous" Icon="Back"                           IsCompact="True"/>
+            <AppBarButton x:ConnectionId='17' Icon="Forward" Label="Next"                             IsCompact="True"/>
+            <AppBarButton x:ConnectionId='18' Icon="ZoomIn" Label="Zoom In "                          IsCompact="True"/>
+            <AppBarButton x:ConnectionId='19' Icon="ZoomOut" Label="Zoom Out"                           IsCompact="True"/>
+            <AppBarButton x:Uid="Like" Icon="Like" Label="Like" IsCompact="True"/>
+            <AppBarButton x:Uid="Dislike" Icon="Dislike" Label="Dislike" IsCompact="True"/>
+        </CommandBar>
+    </Page.BottomAppBar>
+    
+</Page>
+
