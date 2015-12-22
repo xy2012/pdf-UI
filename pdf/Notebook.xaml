@@ -1,0 +1,19 @@
+﻿<Page
+    x:Class="pdf.Notebook"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:pdf"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="Transparent">
+        <StackPanel x:Name="StatusPanel" Orientation="Vertical" RelativePanel.AlignBottomWithPanel="True">
+        <TextBlock x:Name="StatusLabel" Margin="41,0,-1.333,10" TextWrapping="Wrap" Text="Status:" Height="148" />
+        <Border x:Name="StatusBorder" Margin="0,0,0,0" Visibility="Collapsed" >
+            <TextBlock x:Name="StatusBlock"  FontWeight="Bold" MaxHeight="200" MinWidth="{Binding ActualWidth, ElementName=Splitter}" TextTrimming="CharacterEllipsis"  Margin="20,10,10,20" TextWrapping="Wrap"/>
+        </Border>
+         
+        </StackPanel>
+    </Grid>
+</Page>

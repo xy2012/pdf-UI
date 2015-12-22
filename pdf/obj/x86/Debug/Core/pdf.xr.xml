@@ -233,6 +233,7 @@
       <RootProperty Name="ElementName" />
     </RootType>
     <RootType FullName="pdf.MainPage" />
+    <RootType FullName="pdf.Notebook" />
     <RootType FullName="Windows.UI.Xaml.Controls.AppBar">
       <RootProperty Name="Background" />
       <RootProperty Name="Content" />

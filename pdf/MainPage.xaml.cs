@@ -62,7 +62,7 @@ namespace pdf
             switch (s)
             {
                 case 0:
-                    
+                    this.ScenarioFrame.Navigate(typeof(Notebook));
                     break;
                 case 1:
                     this.Frame.Navigate(typeof(renderPage));
