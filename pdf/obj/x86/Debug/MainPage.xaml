@@ -9,7 +9,7 @@
 
     <Grid>
         <Grid.Background>
-            <ImageBrush Stretch="UniformToFill"  ImageSource="ms-appx:///Assets/0003.jpg"/>
+            <ImageBrush Stretch="UniformToFill"  ImageSource="ms-appx:///Assets/0001.jpg"/>
         </Grid.Background>
         <SplitView x:ConnectionId='1' x:Name="View"   MinWidth="0"
                    DisplayMode="CompactOverlay" 
@@ -26,10 +26,31 @@
                         <RowDefinition Height="Auto" />
                     </Grid.RowDefinitions>
                     <StackPanel Orientation="Vertical">
-                        <Button x:ConnectionId='2' x:Name="splitViewToggle" Height="43" Content="split" Background="Transparent"                              />
-                        <Button x:ConnectionId='3' x:Name="render" Content="Open PDF" Height="43" Background="Transparent" HorizontalAlignment="Left"                             />
+                        <Button x:ConnectionId='3' x:Name="splitViewToggle" Height="43"   Background="Transparent"                              >
+                            <Button.Content>
+                                <FontIcon  FontFamily="Segoe MDL2 Assets" Glyph="&#xE700;" Margin="0,10,0,0"></FontIcon>
+                            </Button.Content>
+                        </Button>
+                        <Button x:ConnectionId='4' x:Name="render"  Height="43" Background="Transparent" HorizontalAlignment="Left"                             >
+                            <Button.Content>
+                                <StackPanel Orientation="Horizontal" >
+                                    <SymbolIcon Symbol="OpenFile"/>
+                                    <TextBlock Text="OpenFile"
+                                           Margin="24,0,0,0"
+                                           VerticalAlignment="Center" />
+                                </StackPanel>
+                            </Button.Content>
+                        </Button>
                     </StackPanel>
-                    <ListView Grid.Row="1">
+                    <ListView x:ConnectionId='2' x:Name="featureList" Grid.Row="1"                                                >
+                        <ListViewItem>
+                            <StackPanel Orientation="Horizontal" >
+                                <SymbolIcon Symbol="OpenLocal"/>
+                                <TextBlock Text="notebook"
+                                           Margin="24,0,0,0"
+                                           VerticalAlignment="Center" />
+                            </StackPanel>
+                        </ListViewItem>
                         <ListViewItem>
                             <StackPanel Orientation="Horizontal" >
                                 <SymbolIcon Symbol="People" />
@@ -73,9 +94,18 @@
                     </ListView>
 
                 </Grid>
-
-
             </SplitView.Pane>
+            <SplitView.Content>
+                <RelativePanel>
+                    <Frame x:ConnectionId='5' x:Name="ScenarioFrame" Margin="0,5,0,0" RelativePanel.AlignTopWithPanel="True" RelativePanel.Above="StatusPanel"/>
+                    <StackPanel x:ConnectionId='6' x:Name="StatusPanel" Orientation="Vertical" RelativePanel.AlignBottomWithPanel="True">
+                        <TextBlock x:ConnectionId='7' x:Name="StatusLabel" Margin="41,0,-1.333,10" TextWrapping="Wrap" Text="Status:" Height="148" />
+                        <Border x:ConnectionId='8' x:Name="StatusBorder" Margin="0,0,0,0" Visibility="Collapsed" >
+                            <TextBlock x:ConnectionId='9' x:Name="StatusBlock"  FontWeight="Bold" MaxHeight="200" MinWidth="{Binding ActualWidth, ElementName=Splitter}" TextTrimming="CharacterEllipsis"  Margin="20,10,10,20" TextWrapping="Wrap"/>
+                        </Border>
+                    </StackPanel>
+                </RelativePanel>
+            </SplitView.Content>
         </SplitView>
 
     </Grid>

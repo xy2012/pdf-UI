@@ -51,5 +51,28 @@ namespace pdf
                 if (this.View.IsPaneOpen == false)
                 this.View.IsPaneOpen = true;
         }
+
+
+
+        private void featureList_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+            ListView scenarioListBox = sender as ListView;
+            int s = scenarioListBox.SelectedIndex;
+            switch (s)
+            {
+                case 0:
+                    
+                    break;
+                case 1:
+                    this.Frame.Navigate(typeof(renderPage));
+                    break;
+                default:
+                    break;
+            }
+
+
+            }
     }
+
 }
