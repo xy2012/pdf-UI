@@ -25,7 +25,7 @@ namespace pdf
         public Notebook()
         {
             this.InitializeComponent();
-            string a = "01gdsfg hjuhgds&1hvjdshv$$xgcdhsghjgkj&4dhvhsdgvjksE01gdsfg hjuhgds&1hvjdshv$$xgcdhsghjgkj&4dhvhsdgvjksE";
+            string a = "01word pron&1释义$$一个很长的释义$$一个很长长长长长长长长长长长长长长长长的释义&5释义E01词语 音标&4释义E01word pron&1释义$$一个很长的释义$$一个很长长长长长长长长长长长长长长长长的释义&5释义E01word pron&1释义$$一个很长的释义$$一个很长长长长长长长长长长长长长长长长的释义&5释义E01word pron&1释义$$一个很长的释义$$一个很长长长长长长长长长长长长长长长长的释义&5释义E01word pron&1释义$$一个很长的释义$$一个很长长长长长长长长长长长长长长长长的释义&5释义E01word pron&1释义$$一个很长的释义$$一个很长长长长长长长长长长长长长长长长的释义&5释义E01word pron&1释义$$一个很长的释义$$一个很长长长长长长长长长长长长长长长长的释义&5释义E01word pron&1释义$$一个很长的释义$$一个很长长长长长长长长长长长长长长长长的释义&5释义E01word pron&1释义$$一个很长的释义$$一个很长长长长长长长长长长长长长长长长的释义&5释义E01word pron&1释义$$一个很长的释义$$一个很长长长长长长长长长长长长长长长长的释义&5释义E";
             getNotebook(a);
         }
 
@@ -35,14 +35,13 @@ namespace pdf
             string sub;
             string s_temp, s_full;
             string S_xinzhi;
-            int i = 0, j = 2, k = 0, cnt = 0, m;
-            TextBox h=new TextBox();
-            h.Text = "add";
-            while (charArray[i] != '\0')
+            int i = 0, j = 0, k = 0, cnt = 0, m;
+            
+            while (j != a.Length)
             {
                 s_full = "\0";
                 for (i = j; charArray[i] != '&'; i++) { }
-                sub = a.Substring(j, i - j);
+                sub = a.Substring(j+2, i - j-2);
                 s_full = sub + '\n';
                 while (charArray[j] != 'E')
                 {
@@ -83,7 +82,7 @@ namespace pdf
                             break;
                     }
                     s_temp = S_xinzhi;
-                    s_full = S_xinzhi;
+                    s_full = s_full+S_xinzhi;
                     for (i = j; charArray[i] != '&'; i++)
                     {
                         if (charArray[i] == '$' && charArray[i + 1] == '$')
@@ -128,10 +127,18 @@ namespace pdf
                         if (charArray[i] == 'E')
                             break;
                     }
+                    s_full = s_full + '\n';
+                    
                 }
+                j = i + 1;
+                TextBlock h = new TextBlock();
+                h.Margin = new Thickness(12, 12, 12, 12);
+                h.MaxWidth = 150;
+                h.TextWrapping = TextWrapping.Wrap;
                 h.Text = s_full;
                 this.showNotebook.Children.Add(h);
             }
+           
         }
     }
 }
