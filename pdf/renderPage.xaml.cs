@@ -103,6 +103,29 @@ namespace pdf
             m_pPDFFile = e.Parameter as Windows.Storage.StorageFile;
             if(m_pPDFFile != null)
             {
+                m_PDFDoc.pointer = 0;////////////////////
+                m_PDFPage.pointer = 0;
+
+                m_iCurPageIndex = 0;
+                m_fPageWidth = 0.0f;
+                m_fPageHeight = 0.0f;
+
+                m_iStartX = 0;
+                m_iStartY = 0;
+                m_iRenderAreaSizeX = 0;
+                m_iRenderAreaSizeY = 0;
+                m_iRotation = 0;
+
+                m_dbScaleDelta = 0.05f;
+                m_dbScaleFator = 1.0f;
+                m_dbCommonFitWidthScale = 1.0f;
+                m_dbCommonFitHeightScale = 1.0f;
+                m_dbRotateFitWidthScale = 1.0f;
+                m_dbRotateFitHeightScale = 1.0f;
+
+                m_bFitWidth = false;
+                m_bFitHeight = false;
+                m_mousestate = false;
                 OpenPDFDocument(m_pPDFFile);
             }
         }
@@ -345,7 +368,7 @@ namespace pdf
 
             m_bFitHeight = false;
             m_bFitWidth = false;
-            m_dbScaleFator += m_dbScaleDelta;
+            this.m_dbScaleFator += this.m_dbScaleDelta;
             ShowPage();
 
         }
@@ -363,7 +386,7 @@ namespace pdf
 
             m_bFitHeight = false;
             m_bFitWidth = false;
-            m_dbScaleFator -= m_dbScaleDelta;
+            this.m_dbScaleFator -= this.m_dbScaleDelta;
             ShowPage();
 
         }
