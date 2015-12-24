@@ -35,7 +35,8 @@ namespace pdf
             string sub;
             string s_temp, s_full;
             string S_xinzhi;
-            int i = 0, j = 0, k = 0, cnt = 0, m;
+            int i = 0, j = 0, k = 0, cnt = 0;
+            int m = 0,mm=0;
             
             while (j != a.Length)
             {
@@ -43,8 +44,18 @@ namespace pdf
                 for (i = j; charArray[i] != '&'; i++) { }
                 sub = a.Substring(j+2, i - j-2);
                 s_full = sub + '\n';
+                StackPanel stackpanel;
                 while (charArray[j] != 'E')
                 {
+                    if (m % 6 == 0)
+                    {
+                        mm = mm + 1;
+                        stackpanel = new StackPanel();
+                        stackpanel.Orientation = Orientation.Horizontal;
+                        stackpanel.Name = "Number"+mm;
+                        showNotebook.Children.Add(stackpanel);
+                        
+                    }
                     j = i + 2;
                     k = k + 1;
                     cnt = 0;
@@ -133,10 +144,23 @@ namespace pdf
                 j = i + 1;
                 TextBlock h = new TextBlock();
                 h.Margin = new Thickness(12, 12, 12, 12);
-                h.MaxWidth = 150;
+                h.Width = 200;
+                h.Height = 150;
                 h.TextWrapping = TextWrapping.Wrap;
                 h.Text = s_full;
-                this.showNotebook.Children.Add(h);
+                
+                foreach (StackPanel ctl in this.showNotebook.Children)
+                {
+                   
+                        if (ctl.Name == "Number"+mm)
+                        {
+                        ctl.Children.Add(h);
+                        m = m + 1;
+                    }
+                   
+                }
+               
+                //  this.showNotebook.Children.Add(h);
             }
            
         }

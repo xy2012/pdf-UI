@@ -10,12 +10,12 @@
 
     <Grid Background="Transparent">
         <StackPanel x:Name="StatusPanel" Orientation="Vertical" >
-        <TextBlock x:Name="StatusLabel" Margin="41,40,-1.333,10" TextWrapping="Wrap" Text="生词本:" Height="148" />
-           
-              
-                <StackPanel x:Name="showNotebook"  Orientation="Horizontal">
+        <TextBlock x:Name="StatusLabel" Margin="41,40,-1.20,10" TextWrapping="Wrap" Text="生词本:" Height="20" />
+
+            <ScrollViewer HorizontalScrollBarVisibility="Auto">
+                <StackPanel x:Name="showNotebook"  Orientation="Vertical">
                 </StackPanel>
-                
+            </ScrollViewer>
         </StackPanel>
     </Grid>
 </Page>

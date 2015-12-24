@@ -22,7 +22,7 @@
     <AppXManifest Include="C:\Users\v-xiafe\Desktop\foxitSDK\pdf\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2015-12-23T14:57:09.730</Modified>
+      <Modified>2015-12-24T11:14:45.354</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
@@ -146,15 +146,15 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\v-xiafe\Desktop\foxitSDK\pdf\bin\x86\Debug\Core\entrypoint\pdf.exe">
       <PackagePath>entrypoint\pdf.exe</PackagePath>
-      <Modified>2015-12-23T14:57:08.203</Modified>
+      <Modified>2015-12-24T11:14:43.441</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\v-xiafe\Desktop\foxitSDK\pdf\bin\x86\Debug\Core\foxitSDK.dll">
       <PackagePath>foxitSDK.dll</PackagePath>
-      <Modified>2015-12-23T13:54:27.205</Modified>
+      <Modified>2015-12-24T10:59:04.822</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\v-xiafe\Desktop\foxitSDK\pdf\bin\x86\Debug\Core\foxitSDK.winmd">
       <PackagePath>foxitSDK.winmd</PackagePath>
-      <Modified>2015-12-23T13:54:26.653</Modified>
+      <Modified>2015-12-24T10:59:04.483</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\v-xiafe\Desktop\foxitSDK\pdf\bin\x86\Debug\Core\foxitSDK\lib\fsdk_win10_x86.dll">
       <PackagePath>foxitSDK\lib\fsdk_win10_x86.dll</PackagePath>
@@ -202,7 +202,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\v-xiafe\Desktop\foxitSDK\pdf\bin\x86\Debug\Core\pdf.exe">
       <PackagePath>pdf.exe</PackagePath>
-      <Modified>2015-12-23T14:57:09.729</Modified>
+      <Modified>2015-12-24T11:14:45.350</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\v-xiafe\Desktop\foxitSDK\pdf\bin\x86\Debug\Core\pdf.xr.xml">
       <PackagePath>pdf.xr.xml</PackagePath>
@@ -218,7 +218,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\v-xiafe\Desktop\foxitSDK\pdf\bin\x86\Debug\Core\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2015-12-23T14:57:08.824</Modified>
+      <Modified>2015-12-24T11:14:44.116</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\v-xiafe\Desktop\foxitSDK\pdf\bin\x86\Debug\Core\System.AppContext.dll">
       <PackagePath>System.AppContext.dll</PackagePath>
