@@ -33,18 +33,31 @@
         </AppBar>
 
     </Page.TopAppBar>
-   
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Grid>
+        
+        <ScrollViewer>
+            <StackPanel x:Name="display" HorizontalAlignment="Left"  Width="200">
+                <TextBlock Text="zheshiyigeceshi"></TextBlock>
+            </StackPanel>
+        </ScrollViewer>
         <ScrollViewer x:Name="scroll_pdf" Background="Gray" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto">
             <ScrollViewer.RenderTransform>
                 <CompositeTransform SkewY="0" TranslateY="0"/>
             </ScrollViewer.RenderTransform>
             <Image x:Name="image" Stretch="Fill" PointerPressed="GetBeginLocation" PointerReleased="GetEndLocation" PointerMoved="GetMoveLocation"></Image>
         </ScrollViewer>
-    </Grid>
-    <Page.BottomAppBar>
+        <ScrollViewer>
+        <StackPanel x:Name="currentNotebook" HorizontalAlignment="Right"  Width="250">
+            
+        </StackPanel>
+        </ScrollViewer>
         
+    </Grid>
+
+
+
+    <Page.BottomAppBar>
         <CommandBar IsSticky="True">
             <CommandBar.SecondaryCommands>
                 <AppBarButton Label="Rotate Left"  Icon="Refresh" Click="Click_BTN_RotateLeft" IsCompact="True"/>
@@ -59,8 +72,8 @@
             <AppBarButton Icon="Forward" Label="Next" Click="Click_BTN_NextPage"  IsCompact="True"/>
             <AppBarButton Icon="ZoomIn" Label="Zoom In " Click="Click_BTN_ZoomIn" IsCompact="True"/>
             <AppBarButton Icon="ZoomOut" Label="Zoom Out" Click="Click_BTN_ZoomOut" IsCompact="True"/>
-            <AppBarButton x:Uid="Like" Icon="Like" Label="Like" IsCompact="True"/>
-            <AppBarButton x:Uid="Dislike" Icon="Dislike" Label="Dislike" IsCompact="True"/>
+            <AppBarButton x:Name="note" Click="Like_Click" Icon="OpenLocal"  Label="NoteBook" IsCompact="True"/>
+            <AppBarButton x:Name="feedback" Icon="Emoji"  Label="FeedBack" IsCompact="True"/>
         </CommandBar>
     </Page.BottomAppBar>
     
