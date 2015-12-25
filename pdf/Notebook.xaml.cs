@@ -11,6 +11,7 @@ using Windows.UI.Xaml.Controls.Primitives;
 using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
+using Windows.UI.Xaml.Media.Imaging;
 using Windows.UI.Xaml.Navigation;
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
@@ -37,7 +38,11 @@ namespace pdf
             string S_xinzhi;
             int i = 0, j = 0, k = 0, cnt = 0;
             int m = 0,mm=0;
-            
+            ImageBrush brush = new ImageBrush();
+            ImageBrush brush1 = new ImageBrush();
+            brush.ImageSource = new BitmapImage(
+                        new Uri("ms-appx:///Assets/0006.jpg", UriKind.RelativeOrAbsolute)
+                   );
             while (j != a.Length)
             {
                 s_full = "\0";
@@ -52,6 +57,7 @@ namespace pdf
                         mm = mm + 1;
                         stackpanel = new StackPanel();
                         stackpanel.Orientation = Orientation.Horizontal;
+                        
                         stackpanel.Name = "Number"+mm;
                         showNotebook.Children.Add(stackpanel);
                         
@@ -142,19 +148,34 @@ namespace pdf
                     
                 }
                 j = i + 1;
+                Grid g = new Grid();
+                Button close = new Button();
                 TextBlock h = new TextBlock();
-                h.Margin = new Thickness(12, 12, 12, 12);
+               
+                g.Margin = new Thickness(12, 12, 12, 12);
+                g.Background = brush;
                 h.Width = 200;
                 h.Height = 150;
                 h.TextWrapping = TextWrapping.Wrap;
                 h.Text = s_full;
-                
+                g.Children.Add(h);
+                close.Content = "------";
+                //        close.Tag = m;
+                //        g.Tag = m;
+                close.Name = "name"+m;
+                g.Name = "name"+m;
+                close.HorizontalAlignment = HorizontalAlignment.Right;
+                close.VerticalAlignment = VerticalAlignment.Top;
+                close.Height = 25;
+                close.Click += CloseNotebook_Click;
+                close.Background = brush1;
+                g.Children.Add(close);
                 foreach (StackPanel ctl in this.showNotebook.Children)
                 {
                    
                         if (ctl.Name == "Number"+mm)
                         {
-                        ctl.Children.Add(h);
+                        ctl.Children.Add(g);
                         m = m + 1;
                     }
                    
@@ -163,6 +184,30 @@ namespace pdf
                 //  this.showNotebook.Children.Add(h);
             }
            
+        }
+
+        private void CloseNotebook_Click(object sender, RoutedEventArgs e)
+        {
+            Button btn = (Button)sender;
+            
+            foreach (StackPanel ctl in this.showNotebook.Children)
+            {
+                foreach (Grid gri in ctl.Children)
+                {
+
+
+                    if (gri.Name == btn.Name)
+                    {
+                        gri.Visibility = Visibility.Collapsed;
+                    }
+        //            if (gri.Tag == btn.Tag)
+        //            {
+        //                ctl.Visibility = Visibility.Collapsed;
+       //             }
+                }
+            }
+            //    btn.Visibility = Visibility.Collapsed;
+            //    throw new NotImplementedException();
         }
     }
 }

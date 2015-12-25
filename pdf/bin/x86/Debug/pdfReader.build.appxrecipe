@@ -33,6 +33,9 @@
     <AppxPackagedFile Include="C:\Users\v-xiafe\Desktop\foxitSDK\pdf\bin\x86\Debug\Core\Assets\0005.jpg">
       <PackagePath>Assets\0005.jpg</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\v-xiafe\Desktop\foxitSDK\pdf\bin\x86\Debug\Core\Assets\0006.jpg">
+      <PackagePath>Assets\0006.jpg</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\v-xiafe\Desktop\foxitSDK\pdf\bin\x86\Debug\Core\Assets\001.png">
       <PackagePath>Assets\001.png</PackagePath>
     </AppxPackagedFile>
