@@ -35,24 +35,41 @@
     </Page.TopAppBar>
 
     <Grid>
-        
-        <ScrollViewer>
+        <Grid.RowDefinitions>
+
+            <RowDefinition Height="*"/>
+
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+
+            <ColumnDefinition Width="0" />
+
+            <ColumnDefinition Width="*" />
+
+            <ColumnDefinition x:Name="currtbook" Width="0" />
+
+        </Grid.ColumnDefinitions>
+
+        <ScrollViewer Grid.Row="0"  Grid.Column="0">
             <StackPanel x:Name="display" HorizontalAlignment="Left"  Width="200">
                 <TextBlock Text="zheshiyigeceshi"></TextBlock>
             </StackPanel>
         </ScrollViewer>
-        <ScrollViewer x:Name="scroll_pdf" Background="Gray" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto">
+        <ScrollViewer Grid.Row="0"  Grid.Column="1"  x:Name="scroll_pdf" Background="Gray" VerticalScrollBarVisibility="Visible" HorizontalScrollBarVisibility="Visible">
             <ScrollViewer.RenderTransform>
                 <CompositeTransform SkewY="0" TranslateY="0"/>
             </ScrollViewer.RenderTransform>
             <Image x:Name="image" Stretch="Fill" PointerPressed="GetBeginLocation" PointerReleased="GetEndLocation" PointerMoved="GetMoveLocation"></Image>
         </ScrollViewer>
-        <ScrollViewer>
-        <StackPanel x:Name="currentNotebook" HorizontalAlignment="Right"  Width="250">
-            
-        </StackPanel>
+        <ScrollViewer Grid.Row="0"  Grid.Column="2">
+
+            <StackPanel x:Name="currentNotebook" HorizontalAlignment="Right"  Width="250">
+
+            </StackPanel>
+
         </ScrollViewer>
-        
+
     </Grid>
 
 

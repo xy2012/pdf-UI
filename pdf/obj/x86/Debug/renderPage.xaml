@@ -35,24 +35,41 @@
     </Page.TopAppBar>
 
     <Grid>
-        
-        <ScrollViewer>
-            <StackPanel x:ConnectionId='12' x:Name="display" HorizontalAlignment="Left"  Width="200">
+        <Grid.RowDefinitions>
+
+            <RowDefinition Height="*"/>
+
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+
+            <ColumnDefinition Width="0" />
+
+            <ColumnDefinition Width="*" />
+
+            <ColumnDefinition x:ConnectionId='9' x:Name="currtbook" Width="0" />
+
+        </Grid.ColumnDefinitions>
+
+        <ScrollViewer Grid.Row="0"  Grid.Column="0">
+            <StackPanel x:ConnectionId='13' x:Name="display" HorizontalAlignment="Left"  Width="200">
                 <TextBlock Text="zheshiyigeceshi"></TextBlock>
             </StackPanel>
         </ScrollViewer>
-        <ScrollViewer x:ConnectionId='9' x:Name="scroll_pdf" Background="Gray" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto">
+        <ScrollViewer x:ConnectionId='10' Grid.Row="0"  Grid.Column="1"  x:Name="scroll_pdf" Background="Gray" VerticalScrollBarVisibility="Visible" HorizontalScrollBarVisibility="Visible">
             <ScrollViewer.RenderTransform>
                 <CompositeTransform SkewY="0" TranslateY="0"/>
             </ScrollViewer.RenderTransform>
-            <Image x:ConnectionId='11' x:Name="image" Stretch="Fill"                                                                                                  ></Image>
+            <Image x:ConnectionId='12' x:Name="image" Stretch="Fill"                                                                                                  ></Image>
         </ScrollViewer>
-        <ScrollViewer>
-        <StackPanel x:ConnectionId='10' x:Name="currentNotebook" HorizontalAlignment="Right"  Width="250">
-            
-        </StackPanel>
+        <ScrollViewer Grid.Row="0"  Grid.Column="2">
+
+            <StackPanel x:ConnectionId='11' x:Name="currentNotebook" HorizontalAlignment="Right"  Width="250">
+
+            </StackPanel>
+
         </ScrollViewer>
-        
+
     </Grid>
 
 
@@ -60,20 +77,20 @@
     <Page.BottomAppBar>
         <CommandBar IsSticky="True">
             <CommandBar.SecondaryCommands>
-                <AppBarButton x:ConnectionId='13' Label="Rotate Left"  Icon="Refresh"                              IsCompact="True"/>
-                <AppBarButton x:ConnectionId='14' Label="Rotate Right" Icon="Rotate"                               IsCompact="True" />
-                <AppBarButton x:ConnectionId='15' Label="Actual Size" Icon="Add"                              IsCompact="True"/>
-                <AppBarButton x:ConnectionId='16' Label="Fit Width" Icon="Add"                            IsCompact="True"/>
-                <AppBarButton x:ConnectionId='17' Label="Fit Height" Icon="Add"                             IsCompact="True"/>
+                <AppBarButton x:ConnectionId='14' Label="Rotate Left"  Icon="Refresh"                              IsCompact="True"/>
+                <AppBarButton x:ConnectionId='15' Label="Rotate Right" Icon="Rotate"                               IsCompact="True" />
+                <AppBarButton x:ConnectionId='16' Label="Actual Size" Icon="Add"                              IsCompact="True"/>
+                <AppBarButton x:ConnectionId='17' Label="Fit Width" Icon="Add"                            IsCompact="True"/>
+                <AppBarButton x:ConnectionId='18' Label="Fit Height" Icon="Add"                             IsCompact="True"/>
 
             </CommandBar.SecondaryCommands>
 
-            <AppBarButton x:ConnectionId='18' Label="Previous" Icon="Back"                           IsCompact="True"/>
-            <AppBarButton x:ConnectionId='19' Icon="Forward" Label="Next"                             IsCompact="True"/>
-            <AppBarButton x:ConnectionId='20' Icon="ZoomIn" Label="Zoom In "                          IsCompact="True"/>
-            <AppBarButton x:ConnectionId='21' Icon="ZoomOut" Label="Zoom Out"                           IsCompact="True"/>
-            <AppBarButton x:ConnectionId='22' x:Name="note"                    Icon="OpenLocal"  Label="NoteBook" IsCompact="True"/>
-            <AppBarButton x:ConnectionId='23' x:Name="feedback" Icon="Emoji"  Label="FeedBack" IsCompact="True"/>
+            <AppBarButton x:ConnectionId='19' Label="Previous" Icon="Back"                           IsCompact="True"/>
+            <AppBarButton x:ConnectionId='20' Icon="Forward" Label="Next"                             IsCompact="True"/>
+            <AppBarButton x:ConnectionId='21' Icon="ZoomIn" Label="Zoom In "                          IsCompact="True"/>
+            <AppBarButton x:ConnectionId='22' Icon="ZoomOut" Label="Zoom Out"                           IsCompact="True"/>
+            <AppBarButton x:ConnectionId='23' x:Name="note"                    Icon="OpenLocal"  Label="NoteBook" IsCompact="True"/>
+            <AppBarButton x:ConnectionId='24' x:Name="feedback" Icon="Emoji"  Label="FeedBack" IsCompact="True"/>
         </CommandBar>
     </Page.BottomAppBar>
     

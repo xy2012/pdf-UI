@@ -394,7 +394,7 @@ namespace pdf
 
         private void Click_BTN_FitHeight(object sender, RoutedEventArgs e)
         {
-
+           
         }
 
         private void Click_BTN_FitWidth(object sender, RoutedEventArgs e)
@@ -458,151 +458,161 @@ namespace pdf
             }
         }
 
-        private void Searchword_Click(object sender, RoutedEventArgs e)
+        public void Searchword_Click(object sender, RoutedEventArgs e)
         {
-
+           
         }
 
         private void Previous_Click(object sender, RoutedEventArgs e)
         {
            
+            
            
         }
-
-        private void getNotebook(string a)
-        {
-         //   currentNotebook.Visibility = Visibility.Visible;
-            char[] charArray = a.ToCharArray();
-            string sub;
-            string s_temp, s_full;
-            string S_xinzhi;
-            int i = 0, j = 0, k = 0, cnt = 0;
-            int m = 0;
-            ImageBrush brush = new ImageBrush();
-            ImageBrush brush1 = new ImageBrush();
-            brush.ImageSource = new BitmapImage(
-                        new Uri("ms-appx:///Assets/0006.jpg", UriKind.RelativeOrAbsolute)
-                   );
-            while (j != a.Length)
-            {
-                s_full = "\0";
-                for (i = j; charArray[i] != '&'; i++) { }
-                sub = a.Substring(j + 2, i - j - 2);
-                s_full = sub + '\n';
-               
-                while (charArray[j] != 'E')
+       
+                private void getNotebook(string a)
                 {
-                    j = i + 2;
-                    k = k + 1;
-                    cnt = 0;
-                    switch (charArray[i + 1])
+                    GridLength hleng = new GridLength(250);
+                    currtbook.Width = hleng;
+                    char[] charArray = a.ToCharArray();
+                    string sub;
+                    string s_temp, s_full;
+                    string S_xinzhi;
+                    int i = 0, j = 0, k = 0, cnt = 0;
+                    int m = 0;
+                    ImageBrush brush = new ImageBrush();
+                    ImageBrush brush1 = new ImageBrush();
+                    brush.ImageSource = new BitmapImage(
+                                new Uri("ms-appx:///Assets/0006.jpg", UriKind.RelativeOrAbsolute)
+                           );
+                    while (j != a.Length)
                     {
-                        case '1':
-                            S_xinzhi = "prop. ";
-                            break;
-                        case '2':
-                            S_xinzhi = "int. ";
-                            break;
-                        case '3':
-                            S_xinzhi = "abbr. ";
-                            break;
-                        case '4':
-                            S_xinzhi = "n. ";
-                            break;
-                        case '5':
-                            S_xinzhi = "v. ";
-                            break;
-                        case '6':
-                            S_xinzhi = "adj. ";
-                            break;
-                        case '7':
-                            S_xinzhi = "pron. ";
-                            break;
-                        case '8':
-                            S_xinzhi = "art. ";
-                            break;
-                        case '9':
-                            S_xinzhi = "na. ";
-                            break;
-                        default:
-                            S_xinzhi = "more. ";
-                            break;
-                    }
-                    s_temp = S_xinzhi;
-                    s_full = s_full + S_xinzhi;
-                    for (i = j; charArray[i] != '&'; i++)
-                    {
-                        if (charArray[i] == '$' && charArray[i + 1] == '$')
+                        s_full = "\0";
+                        for (i = j; charArray[i] != '&'; i++) { }
+                        sub = a.Substring(j + 2, i - j - 2);
+                        s_full = sub + '\n';
+
+                        while (charArray[j] != 'E')
                         {
-                            sub = a.Substring(j, i - j);
-                            i = i + 1;
-                            j = i + 1;
-                            cnt = cnt + 1;
-                            if (cnt <= 4)
+                            j = i + 2;
+                            k = k + 1;
+                            cnt = 0;
+                            switch (charArray[i + 1])
                             {
-                                s_temp = s_temp + sub + ';';
+                                case '1':
+                                    S_xinzhi = "prop. ";
+                                    break;
+                                case '2':
+                                    S_xinzhi = "int. ";
+                                    break;
+                                case '3':
+                                    S_xinzhi = "abbr. ";
+                                    break;
+                                case '4':
+                                    S_xinzhi = "n. ";
+                                    break;
+                                case '5':
+                                    S_xinzhi = "v. ";
+                                    break;
+                                case '6':
+                                    S_xinzhi = "adj. ";
+                                    break;
+                                case '7':
+                                    S_xinzhi = "pron. ";
+                                    break;
+                                case '8':
+                                    S_xinzhi = "art. ";
+                                    break;
+                                case '9':
+                                    S_xinzhi = "na. ";
+                                    break;
+                                default:
+                                    S_xinzhi = "more. ";
+                                    break;
                             }
-                            s_full = s_full + sub + ';';
+                            s_temp = S_xinzhi;
+                            s_full = s_full + S_xinzhi;
+                            for (i = j; charArray[i] != '&'; i++)
+                            {
+                                if (charArray[i] == '$' && charArray[i + 1] == '$')
+                                {
+                                    sub = a.Substring(j, i - j);
+                                    i = i + 1;
+                                    j = i + 1;
+                                    cnt = cnt + 1;
+                                    if (cnt <= 4)
+                                    {
+                                        s_temp = s_temp + sub + ';';
+                                    }
+                                    s_full = s_full + sub + ';';
+                                    if (cnt == 38)
+                                        break;
+                                }
+                                if (charArray[i] == 'E')
+                                    break;
+                            }
                             if (cnt == 38)
-                                break;
+                            {
+
+                                while (charArray[j] < '0' || charArray[j] > '9')
+                                {
+                                    if (charArray[j] == 'E')
+                                        break;
+                                    j++;
+                                }
+                                i = j;
+                                if (charArray[j] == 'E')
+                                    break;
+                            }
+                            else
+                            {
+                                sub = a.Substring(j, i - j);
+
+                                cnt = cnt + 1;
+                                if (cnt <= 4)
+                                    s_temp = s_temp + sub + ';';
+                                s_full = s_full + sub + ';';
+
+                                if (charArray[i] == 'E')
+                                    break;
+                            }
+                            s_full = s_full + '\n';
+
                         }
-                        if (charArray[i] == 'E')
-                            break;
+                        j = i + 1;
+                        Grid g = new Grid();
+                        Button close = new Button();
+                        TextBlock h = new TextBlock();
+
+                        g.Margin = new Thickness(12, 12, 12, 12);
+                        g.Background = brush;
+                        h.Width = 200;
+                        h.Height = 150;
+                        h.TextWrapping = TextWrapping.Wrap;
+                        h.Text = s_full;
+                        g.Children.Add(h);
+                        close.Content = "------";
+                        close.Name = "name" + m;
+                        g.Name = "name" + m;
+                        close.HorizontalAlignment = HorizontalAlignment.Right;
+                        close.VerticalAlignment = VerticalAlignment.Top;
+                        close.Height = 25;
+                        close.Click += Closeunit_Click;
+                        close.Background = brush1;
+                        g.Children.Add(close);
+                        currentNotebook.Children.Add(g);
+                        m = m + 1;
                     }
-                    if (cnt == 38)
-                    {
-
-                        while (charArray[j] < '0' || charArray[j] > '9')
-                        {
-                            if (charArray[j] == 'E')
-                                break;
-                            j++;
-                        }
-                        i = j;
-                        if (charArray[j] == 'E')
-                            break;
-                    }
-                    else
-                    {
-                        sub = a.Substring(j, i - j);
-
-                        cnt = cnt + 1;
-                        if (cnt <= 4)
-                            s_temp = s_temp + sub + ';';
-                        s_full = s_full + sub + ';';
-
-                        if (charArray[i] == 'E')
-                            break;
-                    }
-                    s_full = s_full + '\n';
-
                 }
-                j = i + 1;
-                Grid g = new Grid();
-                Button close = new Button();
-                TextBlock h = new TextBlock();
+        /*  
+         private void getNotebook(string a)
+         {
+             pdf.currentNotebook newlist = new pdf.currentNotebook();
+             newlist.getword(a);
 
-                g.Margin = new Thickness(12, 12, 12, 12);
-                g.Background = brush;
-                h.Width = 200;
-                h.Height = 150;
-                h.TextWrapping = TextWrapping.Wrap;
-                h.Text = s_full;
-                g.Children.Add(h);
-                close.Content = "------";
-                close.Name = "name" + m;
-                g.Name = "name" + m;
-                close.HorizontalAlignment = HorizontalAlignment.Right;
-                close.VerticalAlignment = VerticalAlignment.Top;
-                close.Height = 25;
-                close.Click += Closeunit_Click;
-                close.Background = brush1;
-                g.Children.Add(close);
-                currentNotebook.Children.Add(g);
-                m = m + 1;
-            }
-        }
+         }
 
+     */
         private void Closeunit_Click(object sender, RoutedEventArgs e)
         {
             Button btn = (Button)sender;
@@ -645,15 +655,17 @@ namespace pdf
         private void Like_Click(object sender, RoutedEventArgs e)
         {
             if (flag_notebook == false)
-            {
+           {
                 string a = "01word pron&1释义$$一个很长的释义$$一个很长长长长长长长长长长长长长长长长的释义&5释义E01词语 音标&4释义E01word pron&1释义$$一个很长的释义$$一个很长长长长长长长长长长长长长长长长的释义&5释义E01word pron&1释义$$一个很长的释义$$一个很长长长长长长长长长长长长长长长长的释义&5释义E01word pron&1释义$$一个很长的释义$$一个很长长长长长长长长长长长长长长长长的释义&5释义E01word pron&1释义$$一个很长的释义$$一个很长长长长长长长长长长长长长长长长的释义&5释义E01word pron&1释义$$一个很长的释义$$一个很长长长长长长长长长长长长长长长长的释义&5释义E01word pron&1释义$$一个很长的释义$$一个很长长长长长长长长长长长长长长长长的释义&5释义E01word pron&1释义$$一个很长的释义$$一个很长长长长长长长长长长长长长长长长的释义&5释义E01word pron&1释义$$一个很长的释义$$一个很长长长长长长长长长长长长长长长长的释义&5释义E01word pron&1释义$$一个很长的释义$$一个很长长长长长长长长长长长长长长长长的释义&5释义E";
                 getNotebook(a);
                 flag_notebook = true;
             }
             else
-            {
-                currentNotebook.Children.Clear();
-                flag_notebook = false;
+           {
+               currentNotebook.Children.Clear();
+               flag_notebook = false;
+                GridLength hleng = new GridLength(0);
+                currtbook.Width = hleng;
             }
         }
     }
