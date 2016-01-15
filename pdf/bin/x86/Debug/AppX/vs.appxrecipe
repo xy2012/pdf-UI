@@ -22,7 +22,7 @@
     <AppXManifest Include="C:\Users\v-xiafe\Desktop\foxitSDK\pdf\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2015-12-28T12:20:05.611</Modified>
+      <Modified>2015-12-30T04:20:32.190</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
@@ -150,15 +150,15 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\v-xiafe\Desktop\foxitSDK\pdf\bin\x86\Debug\Core\entrypoint\pdf.exe">
       <PackagePath>entrypoint\pdf.exe</PackagePath>
-      <Modified>2015-12-28T12:20:04.597</Modified>
+      <Modified>2015-12-30T04:20:21.009</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\v-xiafe\Desktop\foxitSDK\pdf\bin\x86\Debug\Core\foxitSDK.dll">
       <PackagePath>foxitSDK.dll</PackagePath>
-      <Modified>2015-12-28T11:29:12.945</Modified>
+      <Modified>2015-12-30T04:20:13.251</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\v-xiafe\Desktop\foxitSDK\pdf\bin\x86\Debug\Core\foxitSDK.winmd">
       <PackagePath>foxitSDK.winmd</PackagePath>
-      <Modified>2015-12-28T11:29:12.585</Modified>
+      <Modified>2015-12-30T04:20:12.902</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\v-xiafe\Desktop\foxitSDK\pdf\bin\x86\Debug\Core\foxitSDK\lib\fsdk_win10_x86.dll">
       <PackagePath>foxitSDK\lib\fsdk_win10_x86.dll</PackagePath>
@@ -206,11 +206,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\v-xiafe\Desktop\foxitSDK\pdf\bin\x86\Debug\Core\pdf.exe">
       <PackagePath>pdf.exe</PackagePath>
-      <Modified>2015-12-28T12:20:05.610</Modified>
+      <Modified>2015-12-30T04:20:32.184</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\v-xiafe\Desktop\foxitSDK\pdf\bin\x86\Debug\Core\pdf.xr.xml">
       <PackagePath>pdf.xr.xml</PackagePath>
-      <Modified>2015-12-28T11:53:52.853</Modified>
+      <Modified>2015-12-30T04:20:20.752</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\v-xiafe\Desktop\foxitSDK\pdf\bin\x86\Debug\Core\Pivot.csproj">
       <PackagePath>Pivot.csproj</PackagePath>
@@ -222,7 +222,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\v-xiafe\Desktop\foxitSDK\pdf\bin\x86\Debug\Core\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2015-12-28T12:20:05.138</Modified>
+      <Modified>2015-12-30T04:20:24.342</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\v-xiafe\Desktop\foxitSDK\pdf\bin\x86\Debug\Core\System.AppContext.dll">
       <PackagePath>System.AppContext.dll</PackagePath>

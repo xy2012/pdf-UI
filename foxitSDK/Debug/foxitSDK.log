@@ -1,5 +1,5 @@
-﻿Build started 12/28/2015 7:29:02 PM.
-     1>Project "C:\Users\v-xiafe\Desktop\foxitSDK\foxitSDK\foxitSDK.vcxproj" on node 2 (Build target(s)).
+﻿Build started 12/30/2015 12:20:03 PM.
+     1>Project "C:\Users\v-xiafe\Desktop\foxitSDK\foxitSDK\foxitSDK.vcxproj" on node 2 (Rebuild target(s)).
      1>ClCompile:
          C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\CL.exe /c /I"C:\Users\v-xiafe\Desktop\foxitSDK\foxitSDK\\" /I"Generated Files\\" /IDebug\ /ZI /ZW /ZW:nostdlib /nologo /W3 /WX- /sdl /MP /Od /Oy- /D _WINRT_DLL /D _WINDLL /D _UNICODE /D UNICODE /D _DEBUG /D WINAPI_FAMILY=WINAPI_FAMILY_APP /D __WRL_NO_DEFAULT_LIB__ /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Yc"pch.h" /Fp"Debug\pch.pch" /Fo"Debug\\" /Fd"Debug\vc140.pdb" /Gd /TP /wd28204 /FU"C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\lib\store\references\platform.winmd" /FU"C:\Program Files (x86)\Windows Kits\10\References\Windows.Foundation.FoundationContract\1.0.0.0\Windows.Foundation.FoundationContract.winmd" /FU"C:\Program Files (x86)\Windows Kits\10\References\Windows.Foundation.UniversalApiContract\1.0.0.0\Windows.Foundation.UniversalApiContract.winmd" /FU"C:\Program Files (x86)\Windows Kits\10\References\Windows.Networking.Connectivity.WwanContract\1.0.0.0\Windows.Networking.Connectivity.WwanContract.winmd" /analyze- /errorReport:prompt /bigobj pch.cpp
          pch.cpp
@@ -18,8 +18,8 @@
          foxitSDK.vcxproj -> C:\Users\v-xiafe\Desktop\foxitSDK\Debug\foxitSDK\foxitSDK.dll
        _GenerateProjectPriFileCore:
          C:\Program Files (x86)\Windows Kits\10\bin\x64\MakePri.exe New -ProjectRoot C:\Users\v-xiafe\Desktop\foxitSDK\foxitSDK\ -ConfigXml Debug\priconfig.xml -OutputFile C:\Users\v-xiafe\Desktop\foxitSDK\Debug\foxitSDK\foxitSDK.pri -IndexName foxitSDK -Verbose -Overwrite  
-     1>Done Building Project "C:\Users\v-xiafe\Desktop\foxitSDK\foxitSDK\foxitSDK.vcxproj" (Build target(s)).
+     1>Done Building Project "C:\Users\v-xiafe\Desktop\foxitSDK\foxitSDK\foxitSDK.vcxproj" (Rebuild target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:11.29
+Time Elapsed 00:00:11.03

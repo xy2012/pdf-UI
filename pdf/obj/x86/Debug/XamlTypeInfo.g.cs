@@ -132,21 +132,19 @@ namespace pdf.pdfReader_XamlTypeInfo
 
         private void InitTypeTables()
         {
-            _typeNameTable = new string[6];
-            _typeNameTable[0] = "pdf.currentNotebook";
+            _typeNameTable = new string[5];
+            _typeNameTable[0] = "pdf.MainPage";
             _typeNameTable[1] = "Windows.UI.Xaml.Controls.Page";
             _typeNameTable[2] = "Windows.UI.Xaml.Controls.UserControl";
-            _typeNameTable[3] = "pdf.MainPage";
-            _typeNameTable[4] = "pdf.Notebook";
-            _typeNameTable[5] = "pdf.renderPage";
+            _typeNameTable[3] = "pdf.Notebook";
+            _typeNameTable[4] = "pdf.renderPage";
 
-            _typeTable = new global::System.Type[6];
-            _typeTable[0] = typeof(global::pdf.currentNotebook);
+            _typeTable = new global::System.Type[5];
+            _typeTable[0] = typeof(global::pdf.MainPage);
             _typeTable[1] = typeof(global::Windows.UI.Xaml.Controls.Page);
             _typeTable[2] = typeof(global::Windows.UI.Xaml.Controls.UserControl);
-            _typeTable[3] = typeof(global::pdf.MainPage);
-            _typeTable[4] = typeof(global::pdf.Notebook);
-            _typeTable[5] = typeof(global::pdf.renderPage);
+            _typeTable[3] = typeof(global::pdf.Notebook);
+            _typeTable[4] = typeof(global::pdf.renderPage);
         }
 
         private int LookupTypeIndexByName(string typeName)
@@ -181,10 +179,9 @@ namespace pdf.pdfReader_XamlTypeInfo
             return -1;
         }
 
-        private object Activate_0_currentNotebook() { return new global::pdf.currentNotebook(); }
-        private object Activate_3_MainPage() { return new global::pdf.MainPage(); }
-        private object Activate_4_Notebook() { return new global::pdf.Notebook(); }
-        private object Activate_5_renderPage() { return new global::pdf.renderPage(); }
+        private object Activate_0_MainPage() { return new global::pdf.MainPage(); }
+        private object Activate_3_Notebook() { return new global::pdf.Notebook(); }
+        private object Activate_4_renderPage() { return new global::pdf.renderPage(); }
 
         private global::Windows.UI.Xaml.Markup.IXamlType CreateXamlType(int typeIndex)
         {
@@ -196,9 +193,9 @@ namespace pdf.pdfReader_XamlTypeInfo
             switch (typeIndex)
             {
 
-            case 0:   //  pdf.currentNotebook
+            case 0:   //  pdf.MainPage
                 userType = new global::pdf.pdfReader_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_0_currentNotebook;
+                userType.Activator = Activate_0_MainPage;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
@@ -211,23 +208,16 @@ namespace pdf.pdfReader_XamlTypeInfo
                 xamlType = new global::pdf.pdfReader_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 3:   //  pdf.MainPage
+            case 3:   //  pdf.Notebook
                 userType = new global::pdf.pdfReader_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_3_MainPage;
+                userType.Activator = Activate_3_Notebook;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 4:   //  pdf.Notebook
+            case 4:   //  pdf.renderPage
                 userType = new global::pdf.pdfReader_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_4_Notebook;
-                userType.SetIsLocalType();
-                xamlType = userType;
-                break;
-
-            case 5:   //  pdf.renderPage
-                userType = new global::pdf.pdfReader_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_5_renderPage;
+                userType.Activator = Activate_4_renderPage;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;

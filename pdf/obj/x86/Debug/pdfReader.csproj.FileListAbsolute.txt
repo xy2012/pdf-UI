@@ -1422,8 +1422,3 @@ C:\Users\v-xiafe\Desktop\foxitSDK\pdf\obj\x86\Debug\Notebook.xaml
 C:\Users\v-xiafe\Desktop\foxitSDK\pdf\obj\x86\Debug\Notebook.xbf
 C:\Users\v-xiafe\Desktop\foxitSDK\pdf\bin\x86\Debug\Core\Assets\0006.jpg
 C:\Users\v-xiafe\Desktop\foxitSDK\pdf\obj\x86\Debug\Core\Assets\0006.jpg
-C:\Users\v-xiafe\Desktop\foxitSDK\pdf\bin\x86\Debug\currentNotebook.xbf
-C:\Users\v-xiafe\Desktop\foxitSDK\pdf\obj\x86\Debug\currentNotebook.g.i.cs
-C:\Users\v-xiafe\Desktop\foxitSDK\pdf\obj\x86\Debug\currentNotebook.g.cs
-C:\Users\v-xiafe\Desktop\foxitSDK\pdf\obj\x86\Debug\currentNotebook.xaml
-C:\Users\v-xiafe\Desktop\foxitSDK\pdf\obj\x86\Debug\currentNotebook.xbf
